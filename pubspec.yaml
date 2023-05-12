@@ -4,6 +4,8 @@ version: 1.4.1
 repository: https://github.com/FerryAr/form_builder_phone_field
 issue_tracker: https://github.com/FerryAr/form_builder_phone_field/issues
 
+publish_to: "none"
+
 environment:
   sdk: ">=2.19.0"
   flutter: ">=3.7.0"
