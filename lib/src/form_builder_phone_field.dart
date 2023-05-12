@@ -14,6 +14,7 @@ class FormBuilderPhoneField extends FormBuilderField<String> {
   final TextInputType keyboardType;
   final bool obscureText;
   final TextStyle? style;
+  final InputDecoration decoration;
   final TextEditingController? controller;
   final TextCapitalization textCapitalization;
   final TextInputAction? textInputAction;
@@ -132,7 +133,7 @@ class FormBuilderPhoneField extends FormBuilderField<String> {
     required super.name,
     super.validator,
     super.initialValue,
-    super.decoration,
+    required this.decoration,
     super.onChanged,
     super.valueTransformer,
     super.enabled,
@@ -200,7 +201,7 @@ class FormBuilderPhoneField extends FormBuilderField<String> {
             final state = field as _FormBuilderPhoneFieldState;
 
             return InputDecorator(
-              decoration: state.decoration,
+              decoration: decoration,
               child: Row(
                 children: <Widget>[
                   GestureDetector(
